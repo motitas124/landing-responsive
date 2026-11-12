@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tostadero Andino — Café de especialidad en Quito</title>
+  <meta name="description" content="Landing page responsive de un tostadero de café ficticio. Proyecto de práctica con HTML semántico, Sass, BEM, Flexbox y CSS Grid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="header__inner container">
+      <a class="logo" href="#">
+        <span class="logo__mark" aria-hidden="true">◐</span>
+        <span class="logo__text">Tostadero Andino</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#origen">Origen</a></li>
+          <li><a class="nav__link" href="#cafes">Cafés</a></li>
+          <li><a class="nav__link" href="#proceso">Proceso</a></li>
+          <li><a class="nav__link" href="#visitanos">Visítanos</a></li>
+          <li><a class="button button--small" href="#suscripcion">Suscríbete</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <p class="eyebrow">Café de especialidad · Quito</p>
+          <h1 class="hero__title">Del volcán<br>a tu taza.</h1>
+          <p class="hero__text">Tostamos cada semana granos de pequeños productores de Intag, Loja y Zamora. Café fresco, trazable y pagado a precio justo.</p>
+          <div class="hero__actions">
+            <a class="button" href="#cafes">Ver cafés</a>
+            <a class="button button--ghost" href="#proceso">Cómo tostamos</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__cup">
+            <div class="hero__steam"><span></span><span></span><span></span></div>
+          </div>
+          <div class="hero__badge"><strong>2.800</strong> m s. n. m.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Datos del tostadero">
+      <ul class="stats__list container">
+        <li class="stats__item"><span class="stats__number">12</span><span class="stats__label">fincas aliadas</span></li>
+        <li class="stats__item"><span class="stats__number">86+</span><span class="stats__label">puntaje SCA promedio</span></li>
+        <li class="stats__item"><span class="stats__number">72 h</span><span class="stats__label">del tueste a tu puerta</span></li>
+        <li class="stats__item"><span class="stats__number">3</span><span class="stats__label">provincias de origen</span></li>
+      </ul>
+    </section>
+
+    <section class="section" id="origen">
+      <div class="container split">
+        <div class="split__media" aria-hidden="true">
+          <div class="mountains">
+            <span class="mountains__peak mountains__peak--back"></span>
+            <span class="mountains__peak mountains__peak--front"></span>
+            <span class="mountains__sun"></span>
+          </div>
+        </div>
+        <div class="split__content">
+          <p class="eyebrow">Nuestro origen</p>
+          <h2 class="section__title">Granos que crecen entre montañas</h2>
+          <p>La altura hace que el grano madure despacio y desarrolle más azúcares. Por eso trabajamos con fincas entre 1.400 y 2.000 metros, visitamos cada cosecha y publicamos lo que pagamos por cada saco.</p>
+          <ul class="checklist">
+            <li class="checklist__item">Compra directa, sin intermediarios</li>
+            <li class="checklist__item">Lotes pequeños y trazables</li>
+            <li class="checklist__item">Empaque compostable con válvula</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="cafes">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow">Tienda</p>
+          <h2 class="section__title">Elige tu café</h2>
+          <p class="section__lead">Tres perfiles para tres momentos del día. Todos en bolsa de 340 g, en grano o molido a tu medida.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card__swatch card__swatch--light" aria-hidden="true"></div>
+            <div class="card__body">
+              <span class="tag">Tueste claro</span>
+              <h3 class="card__title">Intag Floral</h3>
+              <p class="card__text">Notas a jazmín, mandarina y panela. Ideal para métodos de filtro.</p>
+              <dl class="card__specs">
+                <div><dt>Altura</dt><dd>1.800 m</dd></div>
+                <div><dt>Proceso</dt><dd>Lavado</dd></div>
+              </dl>
+            </div>
+            <footer class="card__footer">
+              <span class="card__price">$14.50</span>
+              <a class="button button--small" href="#suscripcion">Agregar</a>
+            </footer>
+          </article>
+
+          <article class="card card--featured">
+            <div class="card__swatch card__swatch--medium" aria-hidden="true"></div>
+            <div class="card__body">
+              <span class="tag tag--accent">Más vendido</span>
+              <h3 class="card__title">Loja Clásico</h3>
+              <p class="card__text">Chocolate de leche, caramelo y nuez. Equilibrado y dulce, va con todo.</p>
+              <dl class="card__specs">
+                <div><dt>Altura</dt><dd>1.650 m</dd></div>
+                <div><dt>Proceso</dt><dd>Honey</dd></div>
+              </dl>
+            </div>
+            <footer class="card__footer">
+              <span class="card__price">$13.00</span>
+              <a class="button button--small" href="#suscripcion">Agregar</a>
+            </footer>
+          </article>
+
+          <article class="card">
+            <div class="card__swatch card__swatch--dark" aria-hidden="true"></div>
+            <div class="card__body">
+              <span class="tag">Tueste oscuro</span>
+              <h3 class="card__title">Zamora Intenso</h3>
+              <p class="card__text">Cacao amargo, ciruela y especias. Perfecto para espresso y moka.</p>
+              <dl class="card__specs">
+                <div><dt>Altura</dt><dd>1.450 m</dd></div>
+                <div><dt>Proceso</dt><dd>Natural</dd></div>
+              </dl>
+            </div>
+            <footer class="card__footer">
+              <span class="card__price">$13.50</span>
+              <a class="button button--small" href="#suscripcion">Agregar</a>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proceso">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow">Proceso</p>
+          <h2 class="section__title">De la finca a tu taza en 4 pasos</h2>
+        </header>
+        <ol class="steps">
+          <li class="steps__item">
+            <span class="steps__number">01</span>
+            <h3 class="steps__title">Cosecha selectiva</h3>
+            <p class="steps__text">Solo se recogen las cerezas maduras, una por una.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__number">02</span>
+            <h3 class="steps__title">Catación</h3>
+            <p class="steps__text">Probamos cada lote y elegimos los de más de 85 puntos.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__number">03</span>
+            <h3 class="steps__title">Tueste semanal</h3>
+            <p class="steps__text">Tostamos en lotes de 5 kg con perfiles para cada origen.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__number">04</span>
+            <h3 class="steps__title">Envío fresco</h3>
+            <p class="steps__text">Lo empacamos el mismo día y llega en menos de 72 horas.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="suscripcion">
+      <div class="container newsletter">
+        <div class="newsletter__content">
+          <h2 class="section__title">Recibe café fresco cada mes</h2>
+          <p>Suscríbete y te enviamos un origen distinto cada mes, con su ficha de cata.</p>
+        </div>
+        <form class="form" id="form-suscripcion" novalidate>
+          <label class="form__label" for="correo">Correo electrónico</label>
+          <div class="form__row">
+            <input class="form__input" type="email" id="correo" name="correo" placeholder="tu@correo.com" required autocomplete="email">
+            <button class="button button--accent" type="submit">Suscribirme</button>
+          </div>
+          <p class="form__message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="visitanos">
+      <div class="container visit">
+        <div>
+          <p class="eyebrow">Visítanos</p>
+          <h2 class="section__title">Barra de cata abierta</h2>
+          <p>Ven a probar los cafés de temporada antes de llevarlos a casa.</p>
+        </div>
+        <dl class="schedule">
+          <div class="schedule__row"><dt>Lunes a viernes</dt><dd>08:00 – 19:00</dd></div>
+          <div class="schedule__row"><dt>Sábado</dt><dd>09:00 – 17:00</dd></div>
+          <div class="schedule__row"><dt>Domingo</dt><dd>Cerrado</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="anio">2026</span> Tostadero Andino · Marca ficticia creada como proyecto de práctica.</p>
+      <p>Diseño y código: <a class="footer__link" href="https://github.com/motitas124">Rendy Silva</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
